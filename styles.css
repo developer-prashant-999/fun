@@ -70,3 +70,18 @@ button:hover {
     border-radius: 20px;
     margin-top: 20px;
 }
+
+#question-container {
+    margin: 20px 0;
+    text-align: left;
+}
+
+#question {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#hint {
+    font-size: 14px;
+    color: #888;
+}
