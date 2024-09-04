@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runaway Submit Button</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h2>Login, if you can!</h2>
+        <form>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <button id="submitBtn" type="button">Catch Me!</button>
+        </form>
+    </div>
+
+    <div class="container" id="cake-container" style="display: none;">
+        <h2>Congratulations!</h2>
+        <p>You caught the button! Here's a virtual cake 🎂 for your effort!</p>
+        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cake" class="cake-img">
+        <p>But wait... can you eat it? 😜</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
