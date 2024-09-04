@@ -9,7 +9,7 @@ const questions = [
     { question: "What can you catch but not throw?", answer: "cold", hint: "Better take some vitamin C!" },
     { question: "what do you call a fly with no wings?", answer: "walk", hint: "hahahah." },
     { question: "What is full of holes but still holds water?", answer: "sponge", hint: "It lives in the kitchen sink." },
-    { question: "What do u call a fish with no eye?", answer: "fsh", hint: "lol" }
+    { question: "What do u call a fish with no eye?", answer: "fsh", hint: "lol" },
     ];
 
 const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
@@ -38,9 +38,13 @@ document.getElementById("submitBtn").addEventListener("mouseover", function(even
 
 document.getElementById("username").addEventListener("input", function() {
     const usernameValue = document.getElementById("username").value.toLowerCase();
-    if (usernameValue === "solved") {
+    if (usernameValue === "barsha") {
         buttonCanMove = false;
-    } else {
+    } 
+    else if (usernameValue === "sudeepa"){
+        buttonCanMove = false;
+    }
+    else {
         buttonCanMove = true;
     }
 });
@@ -64,11 +68,10 @@ document.getElementById("submitBtn").addEventListener("click", function() {
         customMessage = "Sisters also have free entry!";
     }
 
-    if (!buttonCanMove || username === "solved" || correctAnswerGiven) {
+    if (!buttonCanMove || username === "barsha" || correctAnswerGiven) {
         document.getElementById("login-container").style.display = 'none';
         document.getElementById("cake-container").style.display = 'block';
         document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
-
         if (customMessage) {
             const messageElement = document.createElement("p");
             messageElement.innerText = customMessage;
@@ -77,4 +80,17 @@ document.getElementById("submitBtn").addEventListener("click", function() {
             document.getElementById("cake-container").appendChild(messageElement);
         }
     }
+    if (!buttonCanMove || username === "sudeepa" || correctAnswerGiven) {
+        document.getElementById("login-container").style.display = 'none';
+        document.getElementById("cake-container").style.display = 'block';
+        document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
+   
+        if (customMessage) {
+            const messageElement = document.createElement("p");
+            messageElement.innerText = customMessage;
+            messageElement.style.fontSize = "18px";
+            messageElement.style.color = "#ff4500";
+            document.getElementById("cake-container").appendChild(messageElement);
+        }
+    }    
 });
